@@ -1,11 +1,13 @@
 package dev.eunice.assessment4.api
 
-interface ApiInterface {
-    @GET(("/user"))
-    suspend fun getUser():Response<UserResponse>
+import dev.eunice.assessment4.model.UserResponse
+import retrofit2.Response
+import retrofit2.http.GET
 
-    @GET("/User/{id}")
-    suspend fun getUserById(@Path("id")userId:Int):Response<User>
+interface ApiInterface {
+    @GET(("/posts"))
+    suspend fun getUser(): Response<UserResponse>
+
 
 
 }
